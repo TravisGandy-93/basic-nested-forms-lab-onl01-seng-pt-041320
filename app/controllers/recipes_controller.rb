@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :recipe_params, only: [:create]
   def show
     @recipe = Recipe.find(params[:id])
   end
